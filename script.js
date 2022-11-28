@@ -1,6 +1,6 @@
 let wordToInt = ['Rock', 'Paper', 'Scissors'];
-let userScore = 0;
-let comScore = 0;
+let userScore;
+let comScore;
 
 function getUserInput() {
     let userInput = prompt("Enter Rock, Paper or Scissors");
@@ -29,7 +29,26 @@ function getWinner(userInput, comInput) {
 }
 
 function game() {
+    userScore = 0;
+    comScore = 0;
     for (let i = 0; i < 5; i++) {
-
+        let userInput;
+        do{
+           userInput = getUserInput(); 
+        } while (userInput == -1);
+        let comInput = Math.floor(Math.random() * 3);
+        console.log(comInput);
+        console.log(getWinner(userInput, comInput));
+        console.log(`User: ${userScore} Computer: ${comScore}`);
     }
+
+    if (comScore > userScore) {
+        console.log('You Lose!');
+    } else {
+        console.log('You Win!');
+    }
+
+    return;
 }
+
+game();
