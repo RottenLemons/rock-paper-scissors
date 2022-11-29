@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="./script.js"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <main>
+        <div class="buttons">
+            <button class="rock"><img class="rock" src="./imgs/rock.png" alt="rock"></button>
+            <button class="paper"><img class="paper" src="./imgs/paper.png" alt="paper"></button>
+            <button class="scissors"><img class="scissors" src="./imgs/scissors.png" alt="scissors"></button>
+        </div>
+        <div class="info">
+            <p class="score">0 - 0</p>
+            <p class="result"></p>
+            <p class="winner"></p>
+        </div>
+    </main>
 </body>
 </html>
